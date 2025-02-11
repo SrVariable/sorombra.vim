@@ -43,7 +43,7 @@ if &background == 'dark'
     hi MatchParen cterm=italic ctermbg=NONE ctermfg=203 guibg=NONE guifg=#f25151
     hi ModeMsg ctermfg=253 guifg=#dddddd
     hi MoreMsg ctermfg=253 guifg=#dddddd
-    hi PreProc ctermfg=247 guifg=#999999
+    hi PreProc ctermfg=250 guifg=#b3b3b3
     hi Question ctermfg=77 guifg=#51f26c
     hi QuickFixLine ctermbg=215 ctermfg=235 guibg=#f29951 guifg=#222222
     hi Search ctermbg=221 ctermfg=235 guibg=#f2ca51 guifg=#222222

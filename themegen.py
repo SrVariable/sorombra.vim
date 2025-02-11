@@ -14,6 +14,7 @@ DARKGRAY = {"cterm": "236", "gui": "#333333"}
 SHADOWGRAY = {"cterm": "238", "gui": "#4d4d4d"}
 GRAY = {"cterm": "242", "gui": "#666666"}
 LIGHTGRAY = {"cterm": "247", "gui": "#999999"}
+SILVERGRAY = {"cterm": "250", "gui": "#b3b3b3"}
 
 def header(filename: str = "generated.vim",
            maintainer: str = "SrVariable",
@@ -70,7 +71,7 @@ def dark() -> str:
     hi MatchParen cterm=italic ctermbg=NONE ctermfg={RED["cterm"]} guibg=NONE guifg={RED["gui"]}
     hi ModeMsg ctermfg={WHITE["cterm"]} guifg={WHITE["gui"]}
     hi MoreMsg ctermfg={WHITE["cterm"]} guifg={WHITE["gui"]}
-    hi PreProc ctermfg={LIGHTGRAY["cterm"]} guifg={LIGHTGRAY["gui"]}
+    hi PreProc ctermfg={SILVERGRAY["cterm"]} guifg={SILVERGRAY["gui"]}
     hi Question ctermfg={GREEN["cterm"]} guifg={GREEN["gui"]}
     hi QuickFixLine ctermbg={ORANGE["cterm"]} ctermfg={BLACK["cterm"]} guibg={ORANGE["gui"]} guifg={BLACK["gui"]}
     hi Search ctermbg={YELLOW["cterm"]} ctermfg={BLACK["cterm"]} guibg={YELLOW["gui"]} guifg={BLACK["gui"]}
