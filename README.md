@@ -9,7 +9,7 @@ Sorombra is a simple dark color scheme for Vim.
 Currently, the easiest way to install this theme (at least on Linux) is using the following commands:
 ```shell
 mkdir -p ~/.vim/colors
-curl https://raw.githubusercontent.com/SrVariable/sorombra.vim/refs/heads/main/sorombra.vim > ~/.vim/colors
+curl https://raw.githubusercontent.com/SrVariable/sorombra.vim/refs/heads/main/sorombra.vim > ~/.vim/colors/sorombra.vim
 ```
 Then in vim you just have to execute `:colorscheme sorombra`.
 
