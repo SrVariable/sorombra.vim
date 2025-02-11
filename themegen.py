@@ -8,9 +8,10 @@ ORANGE = {"cterm": "215", "gui": "#f29951"}
 GREEN = {"cterm": "77", "gui": "#51f26c"}
 CYAN = {"cterm": "50", "gui": "#51f2d7"}
 BLUE = {"cterm": "75", "gui": "#5194f2"}
-PURPLE = {"cterm": "99", "gui": "#8751f2"}
-PINK = {"cterm": "206", "gui": "#f251e5"} # currently unused
+PURPLE = {"cterm": "141", "gui": "#aa85f2"}
+PINK = {"cterm": "219", "gui": "#ffafff"} # currently unused
 DARKGRAY = {"cterm": "236", "gui": "#333333"}
+SHADOWGRAY = {"cterm": "238", "gui": "#4d4d4d"}
 GRAY = {"cterm": "242", "gui": "#666666"}
 LIGHTGRAY = {"cterm": "247", "gui": "#999999"}
 
@@ -36,12 +37,14 @@ let g:colors_name = "{filename[:-4]}"
 
 '''
 
+# General highlighting for dark theme, I might add specific highlighting
+# for different filetypes in the future
 def dark() -> str:
     return f'''hi Normal ctermbg={BLACK["cterm"]} ctermfg={WHITE["cterm"]} guibg={BLACK["gui"]} guifg={WHITE["gui"]}
     hi ColorColumn cterm=NONE ctermbg={DARKGRAY["cterm"]} ctermfg=NONE guibg={DARKGRAY["gui"]} guifg=NONE
     hi CursorColumn cterm=NONE ctermbg={DARKGRAY["cterm"]} ctermfg=NONE guibg={DARKGRAY["gui"]} guifg=NONE
     hi CursorLine cterm=NONE ctermbg={DARKGRAY["cterm"]} ctermfg=NONE guibg={DARKGRAY["gui"]} guifg=NONE
-    hi Comment ctermfg={GRAY["cterm"]} guifg={GRAY["gui"]}
+    hi Comment cterm=italic ctermfg={PURPLE["cterm"]} guifg={PURPLE["gui"]}
     hi Conceal ctermbg={BLACK["cterm"]} ctermfg={WHITE["cterm"]} guibg={BLACK["gui"]} guifg={WHITE["gui"]}
     hi Constant cterm=italic ctermfg={WHITE["cterm"]} guifg={WHITE["gui"]}
     hi Boolean cterm=italic ctermfg={LIGHTGRAY["cterm"]} guifg={LIGHTGRAY["gui"]}
@@ -71,18 +74,20 @@ def dark() -> str:
     hi Question ctermfg={GREEN["cterm"]} guifg={GREEN["gui"]}
     hi QuickFixLine ctermbg={ORANGE["cterm"]} ctermfg={BLACK["cterm"]} guibg={ORANGE["gui"]} guifg={BLACK["gui"]}
     hi Search ctermbg={YELLOW["cterm"]} ctermfg={BLACK["cterm"]} guibg={YELLOW["gui"]} guifg={BLACK["gui"]}
-    hi Special ctermfg={BLUE["cterm"]} guifg={BLUE["gui"]}
-    hi SpecialKey ctermfg={DARKGRAY["cterm"]} guifg={DARKGRAY["gui"]}
+    hi Special cterm=italic ctermfg={BLUE["cterm"]} guifg={BLUE["gui"]}
+    hi SpecialKey ctermfg={SHADOWGRAY["cterm"]} guifg={SHADOWGRAY["gui"]}
     hi Statement cterm=bold ctermfg={YELLOW["cterm"]} guifg={YELLOW["gui"]}
     hi StatusLine cterm=reverse ctermbg={DARKGRAY["cterm"]} ctermfg={WHITE["cterm"]} gui=reverse guibg={DARKGRAY["gui"]} guifg={WHITE["gui"]} term=reverse
     hi StatusLineTerm cterm=reverse ctermbg={DARKGRAY["cterm"]} ctermfg={WHITE["cterm"]} gui=reverse guibg={DARKGRAY["gui"]} guifg={WHITE["gui"]} term=reverse
     hi StatusLineNC cterm=reverse ctermbg={BLACK["cterm"]} ctermfg={WHITE["cterm"]} gui=reverse guibg={BLACK["gui"]} guifg={WHITE["gui"]} term=reverse
     hi StatusLineTermNC cterm=reverse ctermbg={BLACK["cterm"]} ctermfg={WHITE["cterm"]} gui=reverse guibg={BLACK["gui"]} guifg={WHITE["gui"]} term=reverse
     hi StorageClass ctermfg={YELLOW["cterm"]} guifg={YELLOW["gui"]}
+    hi VertSplit ctermbg={DARKGRAY["cterm"]} ctermfg={DARKGRAY["cterm"]} guibg={DARKGRAY["gui"]} guifg={DARKGRAY["gui"]}
     hi Tag cterm=italic ctermfg={CYAN["cterm"]} guifg={CYAN["gui"]}
-    hi Title cterm=underline ctermfg={CYAN["cterm"]} gui=NONE guifg={CYAN["gui"]}
+    hi Title cterm=bold ctermfg={WHITE["cterm"]} gui=NONE guifg={WHITE["gui"]}
     hi Todo cterm=bold ctermbg=NONE ctermfg={RED["cterm"]} guibg=NONE guifg={RED["gui"]}
-    hi Type ctermfg={LIGHTGRAY["cterm"]} guifg={LIGHTGRAY["gui"]}'''
+    hi Type ctermfg={LIGHTGRAY["cterm"]} guifg={LIGHTGRAY["gui"]}
+    hi Visual ctermbg={SHADOWGRAY["cterm"]} ctermfg=NONE guibg={SHADOWGRAY["gui"]} guifg=NONE'''
 
 # NOTE: Light is currently unsupported. I might support it in the future.
 def color() -> str:

@@ -17,7 +17,7 @@ if &background == 'dark'
     hi ColorColumn cterm=NONE ctermbg=236 ctermfg=NONE guibg=#333333 guifg=NONE
     hi CursorColumn cterm=NONE ctermbg=236 ctermfg=NONE guibg=#333333 guifg=NONE
     hi CursorLine cterm=NONE ctermbg=236 ctermfg=NONE guibg=#333333 guifg=NONE
-    hi Comment ctermfg=242 guifg=#666666
+    hi Comment cterm=italic ctermfg=141 guifg=#aa85f2
     hi Conceal ctermbg=235 ctermfg=253 guibg=#222222 guifg=#dddddd
     hi Constant cterm=italic ctermfg=253 guifg=#dddddd
     hi Boolean cterm=italic ctermfg=247 guifg=#999999
@@ -47,16 +47,18 @@ if &background == 'dark'
     hi Question ctermfg=77 guifg=#51f26c
     hi QuickFixLine ctermbg=215 ctermfg=235 guibg=#f29951 guifg=#222222
     hi Search ctermbg=221 ctermfg=235 guibg=#f2ca51 guifg=#222222
-    hi Special ctermfg=75 guifg=#5194f2
-    hi SpecialKey ctermfg=236 guifg=#333333
+    hi Special cterm=italic ctermfg=75 guifg=#5194f2
+    hi SpecialKey ctermfg=238 guifg=#4d4d4d
     hi Statement cterm=bold ctermfg=221 guifg=#f2ca51
     hi StatusLine cterm=reverse ctermbg=236 ctermfg=253 gui=reverse guibg=#333333 guifg=#dddddd term=reverse
     hi StatusLineTerm cterm=reverse ctermbg=236 ctermfg=253 gui=reverse guibg=#333333 guifg=#dddddd term=reverse
     hi StatusLineNC cterm=reverse ctermbg=235 ctermfg=253 gui=reverse guibg=#222222 guifg=#dddddd term=reverse
     hi StatusLineTermNC cterm=reverse ctermbg=235 ctermfg=253 gui=reverse guibg=#222222 guifg=#dddddd term=reverse
     hi StorageClass ctermfg=221 guifg=#f2ca51
+    hi VertSplit ctermbg=236 ctermfg=236 guibg=#333333 guifg=#333333
     hi Tag cterm=italic ctermfg=50 guifg=#51f2d7
-    hi Title cterm=underline ctermfg=50 gui=NONE guifg=#51f2d7
+    hi Title cterm=bold ctermfg=253 gui=NONE guifg=#dddddd
     hi Todo cterm=bold ctermbg=NONE ctermfg=203 guibg=NONE guifg=#f25151
     hi Type ctermfg=247 guifg=#999999
+    hi Visual ctermbg=238 ctermfg=NONE guibg=#4d4d4d guifg=NONE
 endif
