@@ -40,7 +40,7 @@ let g:colors_name = "{filename[:-4]}"
 
 # General highlighting for dark theme, I might add specific highlighting
 # for different filetypes in the future
-def dark() -> str:
+def dark_general() -> str:
     return f'''hi Normal ctermbg={BLACK["cterm"]} ctermfg={WHITE["cterm"]} guibg={BLACK["gui"]} guifg={WHITE["gui"]}
     hi ColorColumn cterm=NONE ctermbg={DARKGRAY["cterm"]} ctermfg=NONE guibg={DARKGRAY["gui"]} guifg=NONE
     hi CursorColumn cterm=NONE ctermbg={DARKGRAY["cterm"]} ctermfg=NONE guibg={DARKGRAY["gui"]} guifg=NONE
@@ -88,12 +88,22 @@ def dark() -> str:
     hi Title cterm=bold ctermfg={WHITE["cterm"]} gui=NONE guifg={WHITE["gui"]}
     hi Todo cterm=bold ctermbg=NONE ctermfg={RED["cterm"]} guibg=NONE guifg={RED["gui"]}
     hi Type ctermfg={LIGHTGRAY["cterm"]} guifg={LIGHTGRAY["gui"]}
-    hi Visual ctermbg={SHADOWGRAY["cterm"]} ctermfg=NONE guibg={SHADOWGRAY["gui"]} guifg=NONE'''
+    hi Visual ctermbg={SHADOWGRAY["cterm"]} ctermfg=NONE guibg={SHADOWGRAY["gui"]} guifg=NONE
+    hi Folded ctermbg={SHADOWGRAY["cterm"]} ctermfg=NONE guibg={SHADOWGRAY["gui"]} guifg=NONE
+    hi FoldColumn ctermbg={SHADOWGRAY["cterm"]} ctermfg=NONE guibg={SHADOWGRAY["gui"]} guifg=NONE'''
+
+def dark_makefile() -> str:
+    return f'''hi link makeCommands Normal'''
+
+def dark_sql() -> str:
+    return f'''hi link sqlKeyword sqlStatement'''
 
 # NOTE: Light is currently unsupported. I might support it in the future.
 def color() -> str:
     return f'''if &background == \'dark\'
-    {dark()}
+    {dark_general()}
+    {dark_makefile()}
+    {dark_sql()}
 endif
 '''
 

@@ -61,4 +61,8 @@ if &background == 'dark'
     hi Todo cterm=bold ctermbg=NONE ctermfg=203 guibg=NONE guifg=#f25151
     hi Type ctermfg=247 guifg=#999999
     hi Visual ctermbg=238 ctermfg=NONE guibg=#4d4d4d guifg=NONE
+    hi Folded ctermbg=238 ctermfg=NONE guibg=#4d4d4d guifg=NONE
+    hi FoldColumn ctermbg=238 ctermfg=NONE guibg=#4d4d4d guifg=NONE
+    hi link makeCommands Normal
+    hi link sqlKeyword sqlStatement
 endif
