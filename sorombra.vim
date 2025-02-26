@@ -12,6 +12,12 @@ endif
 
 let g:colors_name = "sorombra"
 
+augroup CustomC
+    autocmd!
+    autocmd FileType c,cpp syntax match cTodo /\<NOTE\>/ containedin=cComment,cCppComment
+    autocmd FileType c,cpp highlight link cTodo Todo
+augroup END
+
 if &background == 'dark'
     hi Normal ctermbg=235 ctermfg=253 guibg=#222222 guifg=#dddddd
     hi ColorColumn cterm=NONE ctermbg=236 ctermfg=NONE guibg=#333333 guifg=NONE

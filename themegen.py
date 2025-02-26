@@ -160,9 +160,22 @@ else
 endif
 '''
 
+def c_highlight_group() -> str:
+    return f'''augroup CustomC
+    autocmd!
+    autocmd FileType c,cpp syntax match cTodo /\<NOTE\>/ containedin=cComment,cCppComment
+    autocmd FileType c,cpp highlight link cTodo Todo
+augroup END
+'''
+
+def highlight_match() -> str:
+    return f'''{c_highlight_group()}
+'''
+
 if __name__ == "__main__":
     filename = "sorombra.vim"
     with open(filename, "w") as f:
         f.write(header(filename = filename))
         f.write(init(filename))
+        f.write(highlight_match())
         f.write(color())
